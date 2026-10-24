@@ -1,0 +1,24 @@
+{
+  "name": "@helios-one/odoo-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Odoo: sales and purchase orders, late lines, supplier promise dates, manufacturing, shipments, stock. Read-only unless you enable writes.",
+  "mcpName": "io.github.Helios-One-Oy/odoo-mcp",
+  "type": "module",
+  "license": "MIT",
+  "author": "Helios One Oy <touko@heliosone.fi>",
+  "homepage": "https://github.com/Helios-One-Oy/odoo-mcp-server#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/Helios-One-Oy/odoo-mcp-server.git" },
+  "bugs": { "url": "https://github.com/Helios-One-Oy/odoo-mcp-server/issues" },
+  "keywords": ["mcp", "model-context-protocol", "odoo", "erp", "manufacturing", "purchasing", "claude"],
+  "bin": { "odoo-mcp": "bin/odoo-mcp.js" },
+  "exports": { ".": "./src/index.js" },
+  "files": ["bin/", "src/", "README.md", "SECURITY.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test --test-timeout=30000 test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.1.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"count\": 2,\n  \"limit\": 50,\n  \"offset\": 0,\n  \"rows\": [\n    {\n      \"id\": 7,\n      \"name\": \"Proof Customer Oy (fictional)\",\n      \"email\": \"buyer@customer.example\",\n      \"phone\": false,\n      \"city\": false,\n      \"country_id\": false,\n      \"ref\": false,\n      \"vat\": false,\n      \"is_company\": true,\n      \"parent_id\": false,\n      \"customer_rank\": 0,\n      \"supplier_rank\": 0\n    },\n    {\n      \"id\": 8,\n      \"name\": \"Proof Steel Supplier (fictional)\",\n      \"email\": \"sales@supplier.example\",\n      \"phone\": false,\n      \"city\": false,\n      \"country_id\": false,\n      \"ref\": false,\n      \"vat\": false,\n      \"is_company\": true,\n      \"parent_id\": false,\n      \"customer_rank\": 0,\n      \"supplier_rank\": 0\n    }\n  ]\n}"
+    }
+  ]
+}

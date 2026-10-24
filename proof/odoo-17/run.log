@@ -1,0 +1,47 @@
+== 2026-10-24T02:17:26Z Odoo 17.0, Python 3.11, v25.9.0
+/var/cache/debconf/tmp.ci/postgresql.config.zTGPhE: 12: pg_lsclusters: not found
+== PostgreSQL 17
+== odoo commit dca5cd22d40f25066919d722bf687be48c51b0ec
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+== modules installed
+== API key created for admin (value not logged)
+curl: (7) Failed to connect to 127.0.0.1 port 8069 after 0 ms: Could not connect to server
+== Odoo HTTP up
+npm notice
+npm notice New minor version of npm available! 11.12.1 -> 11.21.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.1
+npm notice To update run: npm install -g npm@11.21.1
+npm notice
+== packed helios-one-odoo-mcp-0.1.0.tgz (12K)
+== installed @helios-one/odoo-mcp@0.1.0 into an empty project
+seeded {"customerId":7,"supplierId":8,"productId":1,"saleId":1,"saleName":"S00001","quoteId":2,"purchaseId":1,"purchaseName":"P00001","poLineId":1,"poLineDatePlannedBefore":"2026-10-01 12:00:00","moId":1,"workcenterId":1}
+PASS tools/list returns 13 tools ["list_open_sales_orders","list_open_purchase_orders","get_order_status","list_supplier_promise_dates","list_late_purchase_lines","list_late_sales_lines","list_manufacturing_orders","list_work_orders","list_shipments","lookup_customer","lookup_supplier","get_inventory_on_hand","update_po_line_promise_date"]
+PASS list_open_sales_orders has the confirmed order
+PASS list_open_sales_orders includeQuotations adds the quotation
+PASS get_order_status (sale, by number) returns lines and the delivery
+PASS get_order_status (purchase, by vendor ref) returns lines and the receipt
+PASS list_open_purchase_orders has the confirmed PO
+PASS list_supplier_promise_dates has the open PO line
+PASS list_late_purchase_lines flags the PO line 23 days late {"days_late":23,"qty_open":5}
+PASS list_late_sales_lines flags the sales line from commitment_date
+PASS list_manufacturing_orders has the confirmed MO
+PASS list_work_orders has the Cutting operation
+PASS list_shipments (outgoing) has the delivery for the sale
+PASS list_shipments (incoming) has the receipt for the PO
+PASS lookup_customer finds the customer
+PASS lookup_supplier finds the supplier by email
+PASS get_inventory_on_hand returns on-hand, incoming (PO 5 + MO 2), outgoing (SO 3) and forecast {"qty_available":0,"virtual_available":4,"incoming_qty":7,"outgoing_qty":3}
+PASS write refused by default (WRITES_DISABLED)
+PASS refused write left date_planned unchanged "2026-10-01 12:00:00"
+PASS enabled server still needs the confirmation text
+PASS confirmed write succeeds {"updated":true,"lineId":1,"order":[1,"P00001 (PROOF-VEND-SO-9)"],"before":"2026-10-01 12:00:00","after":"2026-11-15 12:00:00"}
+PASS direct read-back shows the new date_planned "2026-11-15 12:00:00"
+PASS MCP read-back shows the new promise date
+PASS password auth also works
+PASS wrong password gives AUTH_FAILED
+PASS at least 15 MCP tool calls 21
+PASS: 21 tool calls, 25 checks, Odoo 17.0
+== MCP Inspector CLI against the same installed bin
+inspector tools/call ok: 1 match(es)
+== live proof exit 0

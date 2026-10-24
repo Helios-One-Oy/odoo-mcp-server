@@ -1,0 +1,182 @@
+== 2026-10-24T02:14:53Z node v25.9.0
+
+added 95 packages in 987ms
+npm notice
+npm notice New minor version of npm available! 11.12.1 -> 11.21.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.1
+npm notice To update run: npm install -g npm@11.21.1
+npm notice
+
+> @helios-one/odoo-mcp@0.1.0 test
+> node --test --test-timeout=30000 test/*.test.js
+
+✔ bin --version prints the package version (124.182124ms)
+✔ bin starts a stdio MCP server that lists tools without Odoo settings (155.313347ms)
+✔ package.json and server.json agree for the MCP Registry (0.400792ms)
+✔ lists 13 tools with JSON input schemas and read-only hints (21.271353ms)
+✔ missing settings: tools still list, calls explain what to set (6.663432ms)
+✔ uses JSON-RPC /jsonrpc with authenticate then execute_kw; trailing slash trimmed (3.607802ms)
+✔ wrong password gives AUTH_FAILED and never echoes the secret (1.696411ms)
+✔ ODOO_API_KEY is used in place of the password (2.039692ms)
+✔ list_open_sales_orders: confirmed, not fully delivered; quotations on request; text filter (2.563896ms)
+✔ list_open_sales_orders skips delivery_status filter when the field does not exist (1.521359ms)
+✔ list_open_purchase_orders: confirmed, not fully received; RFQs on request (1.760231ms)
+✔ get_order_status returns header, product lines and transfers; by name or reference (2.776247ms)
+✔ list_supplier_promise_dates: open lines on confirmed POs, soonest first (4.140986ms)
+✔ list_late_purchase_lines computes qty_open and days_late (1.484389ms)
+✔ list_late_sales_lines uses commitment_date, else order date + customer lead (2.280545ms)
+✔ paging applies to filtered rows (1.313418ms)
+✔ manufacturing orders, work orders, shipments, inventory (2.752417ms)
+✔ lookups rank customers and suppliers (1.311708ms)
+✔ input validation rejects bad arguments before calling Odoo (1.383828ms)
+✔ write is refused by default even with the confirmation text (0.917986ms)
+✔ ODOO_MCP_ENABLE_WRITES must be exactly "true" (0.765985ms)
+✔ with writes enabled, the confirmation text is still required (0.938676ms)
+✔ enabled and confirmed write updates date_planned and returns before/after (1.140497ms)
+✔ network and Odoo server errors are mapped to error codes (3.919944ms)
+✔ ODOO_URL must be http(s) (0.763945ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 421.854507
+== node 20: v20.20.2
+TAP version 13
+# Subtest: bin --version prints the package version
+ok 1 - bin --version prints the package version
+  ---
+  duration_ms: 154.630464
+  ...
+# Subtest: bin starts a stdio MCP server that lists tools without Odoo settings
+ok 2 - bin starts a stdio MCP server that lists tools without Odoo settings
+  ---
+  duration_ms: 193.448386
+  ...
+# Subtest: package.json and server.json agree for the MCP Registry
+ok 3 - package.json and server.json agree for the MCP Registry
+  ---
+  duration_ms: 0.348092
+  ...
+# Subtest: lists 13 tools with JSON input schemas and read-only hints
+ok 4 - lists 13 tools with JSON input schemas and read-only hints
+  ---
+  duration_ms: 23.606988
+  ...
+# Subtest: missing settings: tools still list, calls explain what to set
+ok 5 - missing settings: tools still list, calls explain what to set
+  ---
+  duration_ms: 5.887736
+  ...
+# Subtest: uses JSON-RPC /jsonrpc with authenticate then execute_kw; trailing slash trimmed
+ok 6 - uses JSON-RPC /jsonrpc with authenticate then execute_kw; trailing slash trimmed
+  ---
+  duration_ms: 3.572562
+  ...
+# Subtest: wrong password gives AUTH_FAILED and never echoes the secret
+ok 7 - wrong password gives AUTH_FAILED and never echoes the secret
+  ---
+  duration_ms: 1.798362
+  ...
+# Subtest: ODOO_API_KEY is used in place of the password
+ok 8 - ODOO_API_KEY is used in place of the password
+  ---
+  duration_ms: 2.101543
+  ...
+# Subtest: list_open_sales_orders: confirmed, not fully delivered; quotations on request; text filter
+ok 9 - list_open_sales_orders: confirmed, not fully delivered; quotations on request; text filter
+  ---
+  duration_ms: 3.332271
+  ...
+# Subtest: list_open_sales_orders skips delivery_status filter when the field does not exist
+ok 10 - list_open_sales_orders skips delivery_status filter when the field does not exist
+  ---
+  duration_ms: 2.203974
+  ...
+# Subtest: list_open_purchase_orders: confirmed, not fully received; RFQs on request
+ok 11 - list_open_purchase_orders: confirmed, not fully received; RFQs on request
+  ---
+  duration_ms: 2.800277
+  ...
+# Subtest: get_order_status returns header, product lines and transfers; by name or reference
+ok 12 - get_order_status returns header, product lines and transfers; by name or reference
+  ---
+  duration_ms: 4.242786
+  ...
+# Subtest: list_supplier_promise_dates: open lines on confirmed POs, soonest first
+ok 13 - list_supplier_promise_dates: open lines on confirmed POs, soonest first
+  ---
+  duration_ms: 3.395611
+  ...
+# Subtest: list_late_purchase_lines computes qty_open and days_late
+ok 14 - list_late_purchase_lines computes qty_open and days_late
+  ---
+  duration_ms: 2.047353
+  ...
+# Subtest: list_late_sales_lines uses commitment_date, else order date + customer lead
+ok 15 - list_late_sales_lines uses commitment_date, else order date + customer lead
+  ---
+  duration_ms: 2.753937
+  ...
+# Subtest: paging applies to filtered rows
+ok 16 - paging applies to filtered rows
+  ---
+  duration_ms: 2.216514
+  ...
+# Subtest: manufacturing orders, work orders, shipments, inventory
+ok 17 - manufacturing orders, work orders, shipments, inventory
+  ---
+  duration_ms: 4.045375
+  ...
+# Subtest: lookups rank customers and suppliers
+ok 18 - lookups rank customers and suppliers
+  ---
+  duration_ms: 2.084333
+  ...
+# Subtest: input validation rejects bad arguments before calling Odoo
+ok 19 - input validation rejects bad arguments before calling Odoo
+  ---
+  duration_ms: 1.804121
+  ...
+# Subtest: write is refused by default even with the confirmation text
+ok 20 - write is refused by default even with the confirmation text
+  ---
+  duration_ms: 1.347889
+  ...
+# Subtest: ODOO_MCP_ENABLE_WRITES must be exactly "true"
+ok 21 - ODOO_MCP_ENABLE_WRITES must be exactly "true"
+  ---
+  duration_ms: 1.316658
+  ...
+# Subtest: with writes enabled, the confirmation text is still required
+ok 22 - with writes enabled, the confirmation text is still required
+  ---
+  duration_ms: 1.776382
+  ...
+# Subtest: enabled and confirmed write updates date_planned and returns before/after
+ok 23 - enabled and confirmed write updates date_planned and returns before/after
+  ---
+  duration_ms: 1.789091
+  ...
+# Subtest: network and Odoo server errors are mapped to error codes
+ok 24 - network and Odoo server errors are mapped to error codes
+  ---
+  duration_ms: 4.549388
+  ...
+# Subtest: ODOO_URL must be http(s)
+ok 25 - ODOO_URL must be http(s)
+  ---
+  duration_ms: 0.964305
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 513.664101
+== exit node-current=0 node20=0

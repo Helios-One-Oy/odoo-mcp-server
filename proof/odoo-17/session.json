@@ -1,0 +1,1017 @@
+{
+  "startedAt": "2026-10-24T02:18:51.638Z",
+  "odoo": {
+    "server_version": "17.0",
+    "server_serie": "17.0",
+    "protocol": "JSON-RPC /jsonrpc"
+  },
+  "package": {
+    "serverInfo": {
+      "name": "odoo-mcp",
+      "title": "Odoo MCP server",
+      "version": "0.1.0"
+    }
+  },
+  "auth": "api-key",
+  "calls": [
+    {
+      "n": 1,
+      "session": "default (writes not enabled)",
+      "tool": "list_open_sales_orders",
+      "arguments": {},
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 1,
+            "name": "S00001",
+            "state": "sale",
+            "partner_id": [
+              7,
+              "Proof Customer Oy (fictional)"
+            ],
+            "client_order_ref": "PROOF-CUST-PO-1",
+            "date_order": "2026-10-24 02:18:52",
+            "commitment_date": "2026-10-01 10:00:00",
+            "expected_date": "2026-10-24 02:18:52",
+            "delivery_status": "pending",
+            "invoice_status": "to invoice",
+            "amount_total": 431.25,
+            "currency_id": [
+              1,
+              "USD"
+            ],
+            "user_id": [
+              2,
+              "Administrator"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "session": "default (writes not enabled)",
+      "tool": "list_open_sales_orders",
+      "arguments": {
+        "includeQuotations": true
+      },
+      "isError": false,
+      "result": {
+        "count": 2,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 2,
+            "name": "S00002",
+            "state": "draft",
+            "partner_id": [
+              7,
+              "Proof Customer Oy (fictional)"
+            ],
+            "client_order_ref": false,
+            "date_order": "2026-10-24 02:18:52",
+            "commitment_date": false,
+            "expected_date": "2026-10-24 02:18:54",
+            "delivery_status": false,
+            "invoice_status": "no",
+            "amount_total": 143.75,
+            "currency_id": [
+              1,
+              "USD"
+            ],
+            "user_id": [
+              2,
+              "Administrator"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "S00001",
+            "state": "sale",
+            "partner_id": [
+              7,
+              "Proof Customer Oy (fictional)"
+            ],
+            "client_order_ref": "PROOF-CUST-PO-1",
+            "date_order": "2026-10-24 02:18:52",
+            "commitment_date": "2026-10-01 10:00:00",
+            "expected_date": "2026-10-24 02:18:52",
+            "delivery_status": "pending",
+            "invoice_status": "to invoice",
+            "amount_total": 431.25,
+            "currency_id": [
+              1,
+              "USD"
+            ],
+            "user_id": [
+              2,
+              "Administrator"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "session": "default (writes not enabled)",
+      "tool": "get_order_status",
+      "arguments": {
+        "name": "S00001"
+      },
+      "isError": false,
+      "result": {
+        "model": "sale.order",
+        "order": {
+          "id": 1,
+          "name": "S00001",
+          "state": "sale",
+          "partner_id": [
+            7,
+            "Proof Customer Oy (fictional)"
+          ],
+          "client_order_ref": "PROOF-CUST-PO-1",
+          "date_order": "2026-10-24 02:18:52",
+          "commitment_date": "2026-10-01 10:00:00",
+          "expected_date": "2026-10-24 02:18:52",
+          "delivery_status": "pending",
+          "invoice_status": "to invoice",
+          "amount_total": 431.25,
+          "currency_id": [
+            1,
+            "USD"
+          ],
+          "user_id": [
+            2,
+            "Administrator"
+          ]
+        },
+        "lines": [
+          {
+            "id": 1,
+            "order_id": [
+              1,
+              "S00001"
+            ],
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "name": "[PROOF-BRKT-1] Proof Bracket (fictional)",
+            "product_uom_qty": 3,
+            "qty_delivered": 0,
+            "qty_invoiced": 0,
+            "customer_lead": 0,
+            "display_type": false
+          }
+        ],
+        "transfers": [
+          {
+            "id": 1,
+            "name": "WH/OUT/00001",
+            "state": "confirmed",
+            "picking_type_code": "outgoing",
+            "partner_id": [
+              7,
+              "Proof Customer Oy (fictional)"
+            ],
+            "origin": "S00001",
+            "scheduled_date": "2026-10-01 10:00:00",
+            "date_deadline": "2026-10-01 10:00:00",
+            "date_done": false
+          }
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "session": "default (writes not enabled)",
+      "tool": "get_order_status",
+      "arguments": {
+        "orderType": "purchase",
+        "name": "PROOF-VEND-SO-9"
+      },
+      "isError": false,
+      "result": {
+        "model": "purchase.order",
+        "order": {
+          "id": 1,
+          "name": "P00001",
+          "state": "purchase",
+          "partner_id": [
+            8,
+            "Proof Steel Supplier (fictional)"
+          ],
+          "partner_ref": "PROOF-VEND-SO-9",
+          "date_order": "2026-10-24 02:18:52",
+          "date_approve": "2026-10-24 02:18:52",
+          "date_planned": "2026-10-01 12:00:00",
+          "receipt_status": "pending",
+          "invoice_status": "no",
+          "amount_total": 402.5,
+          "currency_id": [
+            1,
+            "USD"
+          ],
+          "user_id": [
+            2,
+            "Administrator"
+          ]
+        },
+        "lines": [
+          {
+            "id": 1,
+            "order_id": [
+              1,
+              "P00001 (PROOF-VEND-SO-9)"
+            ],
+            "partner_id": [
+              8,
+              "Proof Steel Supplier (fictional)"
+            ],
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "name": "Proof Bracket (fictional)",
+            "product_qty": 5,
+            "qty_received": 0,
+            "qty_invoiced": 0,
+            "date_planned": "2026-10-01 12:00:00",
+            "display_type": false
+          }
+        ],
+        "transfers": [
+          {
+            "id": 2,
+            "name": "WH/IN/00001",
+            "state": "assigned",
+            "picking_type_code": "incoming",
+            "partner_id": [
+              8,
+              "Proof Steel Supplier (fictional)"
+            ],
+            "origin": "P00001",
+            "scheduled_date": "2026-10-01 12:00:00",
+            "date_deadline": "2026-10-01 12:00:00",
+            "date_done": false
+          }
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "session": "default (writes not enabled)",
+      "tool": "list_open_purchase_orders",
+      "arguments": {},
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 1,
+            "name": "P00001",
+            "state": "purchase",
+            "partner_id": [
+              8,
+              "Proof Steel Supplier (fictional)"
+            ],
+            "partner_ref": "PROOF-VEND-SO-9",
+            "date_order": "2026-10-24 02:18:52",
+            "date_approve": "2026-10-24 02:18:52",
+            "date_planned": "2026-10-01 12:00:00",
+            "receipt_status": "pending",
+            "invoice_status": "no",
+            "amount_total": 402.5,
+            "currency_id": [
+              1,
+              "USD"
+            ],
+            "user_id": [
+              2,
+              "Administrator"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "session": "default (writes not enabled)",
+      "tool": "list_supplier_promise_dates",
+      "arguments": {
+        "supplier": "Proof Steel"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "scanned": 1,
+        "truncated": false,
+        "rows": [
+          {
+            "id": 1,
+            "order_id": [
+              1,
+              "P00001 (PROOF-VEND-SO-9)"
+            ],
+            "partner_id": [
+              8,
+              "Proof Steel Supplier (fictional)"
+            ],
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "name": "Proof Bracket (fictional)",
+            "product_qty": 5,
+            "qty_received": 0,
+            "qty_invoiced": 0,
+            "date_planned": "2026-10-01 12:00:00",
+            "display_type": false,
+            "qty_open": 5
+          }
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "session": "default (writes not enabled)",
+      "tool": "list_late_purchase_lines",
+      "arguments": {
+        "asOf": "2026-10-24"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "asOf": "2026-10-24",
+        "scanned": 1,
+        "truncated": false,
+        "rows": [
+          {
+            "id": 1,
+            "order_id": [
+              1,
+              "P00001 (PROOF-VEND-SO-9)"
+            ],
+            "partner_id": [
+              8,
+              "Proof Steel Supplier (fictional)"
+            ],
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "name": "Proof Bracket (fictional)",
+            "product_qty": 5,
+            "qty_received": 0,
+            "qty_invoiced": 0,
+            "date_planned": "2026-10-01 12:00:00",
+            "display_type": false,
+            "qty_open": 5,
+            "days_late": 23
+          }
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "session": "default (writes not enabled)",
+      "tool": "list_late_sales_lines",
+      "arguments": {
+        "asOf": "2026-10-24"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "asOf": "2026-10-24",
+        "scanned": 1,
+        "truncated": false,
+        "rows": [
+          {
+            "id": 1,
+            "order_id": [
+              1,
+              "S00001"
+            ],
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "name": "[PROOF-BRKT-1] Proof Bracket (fictional)",
+            "product_uom_qty": 3,
+            "qty_delivered": 0,
+            "qty_invoiced": 0,
+            "customer_lead": 0,
+            "display_type": false,
+            "partner_id": [
+              7,
+              "Proof Customer Oy (fictional)"
+            ],
+            "promised_date": "2026-10-01",
+            "qty_open": 3,
+            "days_late": 23
+          }
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "session": "default (writes not enabled)",
+      "tool": "list_manufacturing_orders",
+      "arguments": {
+        "query": "Proof Bracket"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 1,
+            "name": "WH/MO/00001",
+            "state": "confirmed",
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "product_qty": 2,
+            "qty_producing": 0,
+            "product_uom_id": [
+              1,
+              "Units"
+            ],
+            "date_start": "2026-10-24 02:18:53",
+            "date_finished": "2026-10-24 03:18:53",
+            "date_deadline": false,
+            "origin": "PROOF",
+            "reservation_state": "assigned",
+            "components_availability": "Available"
+          }
+        ]
+      }
+    },
+    {
+      "n": 10,
+      "session": "default (writes not enabled)",
+      "tool": "list_work_orders",
+      "arguments": {
+        "manufacturingOrderId": 1
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 1,
+            "name": "Cutting",
+            "state": "ready",
+            "production_id": [
+              1,
+              "WH/MO/00001"
+            ],
+            "workcenter_id": [
+              1,
+              "Proof Saw (fictional)"
+            ],
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "qty_production": 2,
+            "qty_produced": 0,
+            "date_start": false,
+            "date_finished": false,
+            "duration_expected": 60,
+            "duration": 0
+          }
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "session": "default (writes not enabled)",
+      "tool": "list_shipments",
+      "arguments": {
+        "direction": "outgoing",
+        "query": "S00001"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 1,
+            "name": "WH/OUT/00001",
+            "state": "confirmed",
+            "picking_type_code": "outgoing",
+            "partner_id": [
+              7,
+              "Proof Customer Oy (fictional)"
+            ],
+            "origin": "S00001",
+            "scheduled_date": "2026-10-01 10:00:00",
+            "date_deadline": "2026-10-01 10:00:00",
+            "date_done": false
+          }
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "session": "default (writes not enabled)",
+      "tool": "list_shipments",
+      "arguments": {
+        "direction": "incoming",
+        "query": "P00001"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 2,
+            "name": "WH/IN/00001",
+            "state": "assigned",
+            "picking_type_code": "incoming",
+            "partner_id": [
+              8,
+              "Proof Steel Supplier (fictional)"
+            ],
+            "origin": "P00001",
+            "scheduled_date": "2026-10-01 12:00:00",
+            "date_deadline": "2026-10-01 12:00:00",
+            "date_done": false
+          }
+        ]
+      }
+    },
+    {
+      "n": 13,
+      "session": "default (writes not enabled)",
+      "tool": "lookup_customer",
+      "arguments": {
+        "query": "Proof Customer"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 7,
+            "name": "Proof Customer Oy (fictional)",
+            "email": "buyer@customer.example",
+            "phone": false,
+            "city": false,
+            "country_id": false,
+            "ref": false,
+            "vat": false,
+            "is_company": true,
+            "parent_id": false,
+            "customer_rank": 0,
+            "supplier_rank": 0
+          }
+        ]
+      }
+    },
+    {
+      "n": 14,
+      "session": "default (writes not enabled)",
+      "tool": "lookup_supplier",
+      "arguments": {
+        "query": "supplier.example"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 8,
+            "name": "Proof Steel Supplier (fictional)",
+            "email": "sales@supplier.example",
+            "phone": false,
+            "city": false,
+            "country_id": false,
+            "ref": false,
+            "vat": false,
+            "is_company": true,
+            "parent_id": false,
+            "customer_rank": 0,
+            "supplier_rank": 0
+          }
+        ]
+      }
+    },
+    {
+      "n": 15,
+      "session": "default (writes not enabled)",
+      "tool": "get_inventory_on_hand",
+      "arguments": {
+        "query": "PROOF-BRKT"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 1,
+            "name": "Proof Bracket (fictional)",
+            "default_code": "PROOF-BRKT-1",
+            "type": "product",
+            "uom_id": [
+              1,
+              "Units"
+            ],
+            "qty_available": 0,
+            "virtual_available": 4,
+            "incoming_qty": 7,
+            "outgoing_qty": 3
+          }
+        ]
+      }
+    },
+    {
+      "n": 16,
+      "session": "default (writes not enabled)",
+      "tool": "update_po_line_promise_date",
+      "arguments": {
+        "lineId": 1,
+        "promiseDate": "2026-11-15",
+        "confirmation": "CONFIRM update_po_line_promise_date"
+      },
+      "isError": true,
+      "result": {
+        "error": {
+          "code": "WRITES_DISABLED",
+          "message": "Writes are disabled. Start the server with ODOO_MCP_ENABLE_WRITES=true to allow update_po_line_promise_date.",
+          "details": {
+            "operation": "update_po_line_promise_date"
+          }
+        }
+      }
+    },
+    {
+      "n": 17,
+      "session": "writes enabled (ODOO_MCP_ENABLE_WRITES=true)",
+      "tool": "update_po_line_promise_date",
+      "arguments": {
+        "lineId": 1,
+        "promiseDate": "2026-11-15"
+      },
+      "isError": true,
+      "result": {
+        "error": {
+          "code": "CONFIRMATION_REQUIRED",
+          "message": "This write needs confirmation=\"CONFIRM update_po_line_promise_date\".",
+          "details": {
+            "operation": "update_po_line_promise_date"
+          }
+        }
+      }
+    },
+    {
+      "n": 18,
+      "session": "writes enabled (ODOO_MCP_ENABLE_WRITES=true)",
+      "tool": "update_po_line_promise_date",
+      "arguments": {
+        "lineId": 1,
+        "promiseDate": "2026-11-15",
+        "confirmation": "CONFIRM update_po_line_promise_date"
+      },
+      "isError": false,
+      "result": {
+        "updated": true,
+        "lineId": 1,
+        "order": [
+          1,
+          "P00001 (PROOF-VEND-SO-9)"
+        ],
+        "before": "2026-10-01 12:00:00",
+        "after": "2026-11-15 12:00:00"
+      }
+    },
+    {
+      "n": 19,
+      "session": "writes enabled (ODOO_MCP_ENABLE_WRITES=true)",
+      "tool": "list_supplier_promise_dates",
+      "arguments": {
+        "supplier": "Proof Steel"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "scanned": 1,
+        "truncated": false,
+        "rows": [
+          {
+            "id": 1,
+            "order_id": [
+              1,
+              "P00001 (PROOF-VEND-SO-9)"
+            ],
+            "partner_id": [
+              8,
+              "Proof Steel Supplier (fictional)"
+            ],
+            "product_id": [
+              1,
+              "[PROOF-BRKT-1] Proof Bracket (fictional)"
+            ],
+            "name": "Proof Bracket (fictional)",
+            "product_qty": 5,
+            "qty_received": 0,
+            "qty_invoiced": 0,
+            "date_planned": "2026-11-15 12:00:00",
+            "display_type": false,
+            "qty_open": 5
+          }
+        ]
+      }
+    },
+    {
+      "n": 20,
+      "session": "password auth",
+      "tool": "lookup_supplier",
+      "arguments": {
+        "query": "Proof Steel"
+      },
+      "isError": false,
+      "result": {
+        "count": 1,
+        "limit": 50,
+        "offset": 0,
+        "rows": [
+          {
+            "id": 8,
+            "name": "Proof Steel Supplier (fictional)",
+            "email": "sales@supplier.example",
+            "phone": false,
+            "city": false,
+            "country_id": false,
+            "ref": false,
+            "vat": false,
+            "is_company": true,
+            "parent_id": false,
+            "customer_rank": 0,
+            "supplier_rank": 0
+          }
+        ]
+      }
+    },
+    {
+      "n": 21,
+      "session": "wrong credentials",
+      "tool": "list_open_sales_orders",
+      "arguments": {},
+      "isError": true,
+      "result": {
+        "error": {
+          "code": "AUTH_FAILED",
+          "message": "Odoo login failed for user \"admin\" on database \"mcp_proof\"",
+          "details": {}
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "tools/list returns 13 tools",
+      "ok": true,
+      "detail": [
+        "list_open_sales_orders",
+        "list_open_purchase_orders",
+        "get_order_status",
+        "list_supplier_promise_dates",
+        "list_late_purchase_lines",
+        "list_late_sales_lines",
+        "list_manufacturing_orders",
+        "list_work_orders",
+        "list_shipments",
+        "lookup_customer",
+        "lookup_supplier",
+        "get_inventory_on_hand",
+        "update_po_line_promise_date"
+      ]
+    },
+    {
+      "name": "list_open_sales_orders has the confirmed order",
+      "ok": true
+    },
+    {
+      "name": "list_open_sales_orders includeQuotations adds the quotation",
+      "ok": true
+    },
+    {
+      "name": "get_order_status (sale, by number) returns lines and the delivery",
+      "ok": true
+    },
+    {
+      "name": "get_order_status (purchase, by vendor ref) returns lines and the receipt",
+      "ok": true
+    },
+    {
+      "name": "list_open_purchase_orders has the confirmed PO",
+      "ok": true
+    },
+    {
+      "name": "list_supplier_promise_dates has the open PO line",
+      "ok": true
+    },
+    {
+      "name": "list_late_purchase_lines flags the PO line 23 days late",
+      "ok": true,
+      "detail": {
+        "days_late": 23,
+        "qty_open": 5
+      }
+    },
+    {
+      "name": "list_late_sales_lines flags the sales line from commitment_date",
+      "ok": true
+    },
+    {
+      "name": "list_manufacturing_orders has the confirmed MO",
+      "ok": true
+    },
+    {
+      "name": "list_work_orders has the Cutting operation",
+      "ok": true
+    },
+    {
+      "name": "list_shipments (outgoing) has the delivery for the sale",
+      "ok": true
+    },
+    {
+      "name": "list_shipments (incoming) has the receipt for the PO",
+      "ok": true
+    },
+    {
+      "name": "lookup_customer finds the customer",
+      "ok": true
+    },
+    {
+      "name": "lookup_supplier finds the supplier by email",
+      "ok": true
+    },
+    {
+      "name": "get_inventory_on_hand returns on-hand, incoming (PO 5 + MO 2), outgoing (SO 3) and forecast",
+      "ok": true,
+      "detail": {
+        "qty_available": 0,
+        "virtual_available": 4,
+        "incoming_qty": 7,
+        "outgoing_qty": 3
+      }
+    },
+    {
+      "name": "write refused by default (WRITES_DISABLED)",
+      "ok": true
+    },
+    {
+      "name": "refused write left date_planned unchanged",
+      "ok": true,
+      "detail": "2026-10-01 12:00:00"
+    },
+    {
+      "name": "enabled server still needs the confirmation text",
+      "ok": true
+    },
+    {
+      "name": "confirmed write succeeds",
+      "ok": true,
+      "detail": {
+        "updated": true,
+        "lineId": 1,
+        "order": [
+          1,
+          "P00001 (PROOF-VEND-SO-9)"
+        ],
+        "before": "2026-10-01 12:00:00",
+        "after": "2026-11-15 12:00:00"
+      }
+    },
+    {
+      "name": "direct read-back shows the new date_planned",
+      "ok": true,
+      "detail": "2026-11-15 12:00:00"
+    },
+    {
+      "name": "MCP read-back shows the new promise date",
+      "ok": true
+    },
+    {
+      "name": "password auth also works",
+      "ok": true
+    },
+    {
+      "name": "wrong password gives AUTH_FAILED",
+      "ok": true
+    },
+    {
+      "name": "at least 15 MCP tool calls",
+      "ok": true,
+      "detail": 21
+    }
+  ],
+  "seed": {
+    "customerId": 7,
+    "supplierId": 8,
+    "productId": 1,
+    "saleId": 1,
+    "saleName": "S00001",
+    "quoteId": 2,
+    "purchaseId": 1,
+    "purchaseName": "P00001",
+    "poLineId": 1,
+    "poLineDatePlannedBefore": "2026-10-01 12:00:00",
+    "moId": 1,
+    "workcenterId": 1
+  },
+  "tools": [
+    {
+      "name": "list_open_sales_orders",
+      "readOnlyHint": true
+    },
+    {
+      "name": "list_open_purchase_orders",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_order_status",
+      "readOnlyHint": true
+    },
+    {
+      "name": "list_supplier_promise_dates",
+      "readOnlyHint": true
+    },
+    {
+      "name": "list_late_purchase_lines",
+      "readOnlyHint": true
+    },
+    {
+      "name": "list_late_sales_lines",
+      "readOnlyHint": true
+    },
+    {
+      "name": "list_manufacturing_orders",
+      "readOnlyHint": true
+    },
+    {
+      "name": "list_work_orders",
+      "readOnlyHint": true
+    },
+    {
+      "name": "list_shipments",
+      "readOnlyHint": true
+    },
+    {
+      "name": "lookup_customer",
+      "readOnlyHint": true
+    },
+    {
+      "name": "lookup_supplier",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_inventory_on_hand",
+      "readOnlyHint": true
+    },
+    {
+      "name": "update_po_line_promise_date",
+      "readOnlyHint": false
+    }
+  ],
+  "readBack": {
+    "via": "direct JSON-RPC purchase.order.line read (admin)",
+    "date_planned": "2026-11-15 12:00:00"
+  },
+  "toolCalls": 21,
+  "finishedAt": "2026-10-24T02:18:55.886Z",
+  "result": "PASS"
+}

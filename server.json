@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Helios-One-Oy/odoo-mcp",
+  "title": "Odoo",
+  "description": "Odoo orders, late lines, supplier promise dates, manufacturing and stock. Read-only by default.",
+  "repository": {
+    "url": "https://github.com/Helios-One-Oy/odoo-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/Helios-One-Oy/odoo-mcp-server#readme",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@helios-one/odoo-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "ODOO_URL", "description": "Odoo base URL, e.g. https://odoo.example.com", "isRequired": true, "format": "string" },
+        { "name": "ODOO_DB", "description": "Odoo database name", "isRequired": true, "format": "string" },
+        { "name": "ODOO_USERNAME", "description": "Odoo login (user email)", "isRequired": true, "format": "string" },
+        { "name": "ODOO_API_KEY", "description": "Odoo API key for that user (or set ODOO_PASSWORD instead)", "isRequired": false, "isSecret": true, "format": "string" },
+        { "name": "ODOO_PASSWORD", "description": "Odoo password, if no API key is used", "isRequired": false, "isSecret": true, "format": "string" },
+        { "name": "ODOO_MCP_ENABLE_WRITES", "description": "Set to true to allow the one write tool (still needs a confirmation text per call)", "isRequired": false, "format": "boolean", "default": "false" }
+      ]
+    }
+  ]
+}
