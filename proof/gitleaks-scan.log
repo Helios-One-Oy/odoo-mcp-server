@@ -1,0 +1,20 @@
+== 2026-10-24T02:20:23Z gitleaks full-history scan
+8.30.1
+commits: 1
+2:20AM INF Unknown SCM platform. Use --platform to include links in findings. host=
+2:20AM INF 1 commits scanned.
+2:20AM INF scanned ~223675 bytes (223.68 KB) in 145ms
+2:20AM INF no leaks found
+== gitleaks exit 0 (0 = no leaks)
+== packed tarball contents
+1.1kB LICENSE
+6.7kB README.md
+1.5kB SECURITY.md
+594B bin/odoo-mcp.js
+1.1kB package.json
+935B src/config.js
+1.1kB src/errors.js
+228B src/index.js
+3.2kB src/odoo-client.js
+2.1kB src/server.js
+18.5kB src/tools.js
