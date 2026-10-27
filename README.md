@@ -25,7 +25,7 @@ claude mcp add odoo \
   -e ODOO_DB=mydb \
   -e ODOO_USERNAME=me@example.com \
   -e ODOO_API_KEY=your-api-key \
-  -- npx -y @helios-one/odoo-mcp
+  -- npx -y @heliosone/odoo-mcp
 ```
 
 Claude Desktop: open *Settings > Developer > Edit Config* and add this to `claude_desktop_config.json`, then restart Claude Desktop:
@@ -35,7 +35,7 @@ Claude Desktop: open *Settings > Developer > Edit Config* and add this to `claud
   "mcpServers": {
     "odoo": {
       "command": "npx",
-      "args": ["-y", "@helios-one/odoo-mcp"],
+      "args": ["-y", "@heliosone/odoo-mcp"],
       "env": {
         "ODOO_URL": "https://odoo.example.com",
         "ODOO_DB": "mydb",

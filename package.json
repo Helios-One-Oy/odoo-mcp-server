@@ -1,5 +1,5 @@
 {
-  "name": "@helios-one/odoo-mcp",
+  "name": "@heliosone/odoo-mcp",
   "version": "0.1.0",
   "description": "MCP server for Odoo: sales and purchase orders, late lines, supplier promise dates, manufacturing, shipments, stock. Read-only unless you enable writes.",
   "mcpName": "io.github.Helios-One-Oy/odoo-mcp",

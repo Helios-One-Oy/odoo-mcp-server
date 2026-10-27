@@ -56,7 +56,7 @@ npm ci --no-audit --no-fund >/dev/null
 TARBALL="$(npm pack --silent)"
 echo "== packed $TARBALL ($(du -h "$TARBALL" | cut -f1))"
 mkdir -p /tmp/consumer && cd /tmp/consumer && npm init -y >/dev/null && npm install --no-audit --no-fund "$REPO/$TARBALL" >/dev/null
-echo "== installed $(node -p "require('./node_modules/@helios-one/odoo-mcp/package.json').name + '@' + require('./node_modules/@helios-one/odoo-mcp/package.json').version") into an empty project"
+echo "== installed $(node -p "require('./node_modules/@heliosone/odoo-mcp/package.json').name + '@' + require('./node_modules/@heliosone/odoo-mcp/package.json').version") into an empty project"
 cd "$REPO"
 
 export ODOO_URL=http://127.0.0.1:8069 ODOO_DB=mcp_proof ODOO_USERNAME=admin ODOO_PASSWORD=admin ODOO_API_KEY_FILE=$KEYFILE

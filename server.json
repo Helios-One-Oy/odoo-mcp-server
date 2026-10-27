@@ -13,7 +13,7 @@
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
-      "identifier": "@helios-one/odoo-mcp",
+      "identifier": "@heliosone/odoo-mcp",
       "version": "0.1.0",
       "runtimeHint": "npx",
       "transport": { "type": "stdio" },
